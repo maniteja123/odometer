@@ -1,18 +1,9 @@
-package Week_1.day3;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Validity {
-//	public static void main(String[] args) {
-//		int number = 23;
-//		if(isValid(number))
-//			System.out.println("Valid");
-//		else
-//			System.out.println("InValid");
-//	}
-	
+public class Validity {	
 	
 	private static ArrayList<Integer> num2Digits(int i){
 		ArrayList<Integer> d = new ArrayList<Integer>();
@@ -28,10 +19,10 @@ public class Validity {
 		List<Integer> digits = num2Digits(number);
 		int prev =0;
 		for(int digit: digits){
-			if(prev<digit) {
-				prev = digit;
+			if(prev>=digit) {
+				return false;
 			}
-			else return false;
+			prev = digit;
 		}
 		return true;
 		
